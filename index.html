@@ -186,6 +186,7 @@ span{border:1px solid gray;background:#333;padding:4px;font-weight:bold;}
 	</div>
 	<!-- 第二个界面-->
 	<div id = "2" class="screenTwo">
+		
 		<div id="imgContainer" style="width:100%;height:30%;margin-bottom: 15%">
 			<img src="baby.png" link="/" target="_blank">
 			<img src="baby.png" link="/" target="_blank">
@@ -217,6 +218,7 @@ span{border:1px solid gray;background:#333;padding:4px;font-weight:bold;}
 			<img src="baby.png" link="/" target="_blank">
 			<img src="baby.png" link="/" target="_blank">
 		</div>
+		<div class="demo" ></div>
 	</div>
 	<!-- 第三个界面  文字-->
 	<div id = "3" class="screenThree">
@@ -229,8 +231,19 @@ span{border:1px solid gray;background:#333;padding:4px;font-weight:bold;}
 
 	<div id="img_music" class="img_music_bg img_music_rotate"></div>
 
+	<script src="js/jquery-1.11.0.min.js"></script>
+	<script src="js/jquery.fireworks.js"></script>
+	<script>
+		$('.demo').fireworks({ 
+		  sound: false, // sound effect
+		  opacity: 0.9, 
+		  width: '100%', 
+		  height: '100%' 
+		});
+	</script>
 </body>
 </html>
+
 <script type="text/javascript">
 
 	window.onload=function(){
@@ -251,7 +264,7 @@ span{border:1px solid gray;background:#333;padding:4px;font-weight:bold;}
 		var i = 1;
 
 		function uu(){
-			if(i>=1){
+			if(i>1){
 				clearInterval(interval);return;
 			}
 			var div1 = $a("" + i,"");
