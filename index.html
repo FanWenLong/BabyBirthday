@@ -1,0 +1,315 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta content="telephone=yes" name="format-detection" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <title>1</title>
+<style>
+body{background:white;}
+span{border:1px solid gray;background:#333;padding:4px;font-weight:bold;}
+.screenOne{background:#FFDBDB;width:100%;height: 100%;position: absolute;top:0px;left: 0px;z-index: 5}
+.screenTwo{background:#000;width:100%;height: 100%;position: absolute;top:0px;left: 0px;z-index: 4}
+.screenThree{background:#0f0;width:100%;height: 100%;position: absolute;top:0px;left: 0px;z-index: 3}
+.screenFour{background:#00f;width:100%;height: 100%;position: absolute;top:0px;left: 0px;z-index: 2}
+.screenFive{background:#f0f;width:100%;height: 100%;position: absolute;top:0px;left: 0px;z-index: 1}
+
+#img_music {
+	position: absolute;
+	right: 40px;
+	top: 50px;
+	z-index: 200;
+	width: 80px;
+	height: 80px;
+	background-repeat: no-repeat
+}
+
+.img_music_bg {
+	background-image: url(music.svg);
+	background-size: contain;
+}
+
+.img_music_rotate {
+	-webkit-animation: rotating 1.2s linear infinite;/* Safari 和 Chrome */
+	-moz-animation: rotating 1.2s linear infinite;/* Firefox */
+	-o-animation: rotating 1.2s linear infinite;/* Opera */
+	animation: rotating 1.2s linear infinite
+}
+
+@keyframes rotating {
+	from {transform: rotate(0deg)}
+	to {transform: rotate(360deg)}
+}
+
+@-webkit-keyframes rotating { /* Safari 和 Chrome */
+	from {-webkit-transform: rotate(0deg)}
+	to {-webkit-transform: rotate(360deg)}
+}
+
+@-moz-keyframes rotating {/* Firefox */
+	from {-moz-transform: rotate(0deg)}
+	to {-moz-transform: rotate(360deg)}
+}
+
+@-o-keyframes rotating {/* Opera */
+	from {-o-transform: rotate(0deg)}
+	to {-o-transform: rotate(360deg)}
+}
+
+#bb_one{
+	width: 500px;
+	height: 500px;
+	margin-left: 2px
+	margin-top:2px;
+	-webkit-animation: scale_one 1.2s linear;/* Safari 和 Chrome */
+	-moz-animation: scale_one 1.2s linear;/* Firefox */
+	-o-animation: scale_one 1.2s linear;/* Opera */
+	animation: scale_one 1.2s linear
+}
+
+@keyframes scale_one {
+	from {transform: scale(0)}
+	to {transform: scale(1)}
+}
+
+@-webkit-keyframes scale_one { /* Safari 和 Chrome */
+	from {-webkit-transform: scale(0)}
+	to {-webkit-transform: scale(1)}
+}
+
+@-moz-keyframes scale_one {/* Firefox */
+	from {-moz-transform: scale(0)}
+	to {-moz-transform: scale(1)}
+}
+
+@-o-keyframes scale_one {/* Opera */
+	from {-o-transform: scale(0)}
+	to {-o-transform: scale(1)}
+}
+
+#bb_one_b{
+	animation-name:t_one_b, t_one_b_a;
+	animation-duration:1200ms, 1500ms;
+	animation-timing-function:linear, linear;
+	animation-delay:0s, 1200ms;
+	animation-iteration-count:1, 1;
+	/* Safari 和 Chrome */
+	-webkit-animation-name:t_one_b, t_one_b_a;
+	-webkit-animation-duration:1200ms, 1500ms;
+	-webkit-animation-timing-function:linear, linear;
+	-webkit-animation-delay:0s, 1200ms;
+	-webkit-animation-iteration-count:1, 1;
+	/* Firefox */
+	-moz-animation-name:t_one_b, t_one_b_a;
+	-moz-animation-duration:1200ms, 1500ms;
+	-moz-animation-timing-function:linear, linear;
+	-moz-animation-delay:0s, 1200ms;
+	-moz-animation-iteration-count:1, 1;
+	/* Opera */
+	-o-animation-name:t_one_b, t_one_b_a;
+	-o-animation-duration:1200ms, 1500ms;
+	-o-animation-timing-function:linear, linear;
+	-o-animation-delay:0s, 1200ms;
+	-o-animation-iteration-count:1, 1;
+}
+
+@keyframes t_one_b {
+	from {left:-70%;}
+	to {left:30%;}
+}
+
+@-webkit-keyframes t_one_b { /* Safari 和 Chrome */
+	from {left:-70%;}
+	to {left:30%;}
+}
+
+@-moz-keyframes t_one_b {/* Firefox */
+	from {left:-70%;}
+	to {left:30%;}
+}
+
+@-o-keyframes t_one_b {/* Opera */
+	from {left:-70%;}
+	to {left:30%;}
+}
+
+@keyframes t_one_b_a {
+	0% {left:30%;}
+	25% {left:15%;}
+	50% {left:0%;}
+	75% {left:15%;}
+	100% {left:15%;}
+}
+
+@-webkit-keyframes t_one_b_a { /* Safari 和 Chrome */
+	0% {left:30%;}
+	25% {left:15%;}
+	50% {left:0%;}
+	75% {left:15%;}
+	100% {left:15%;}
+}
+
+@-moz-keyframes t_one_b_a {/* Firefox */
+	0% {left:30%;}
+	25% {left:15%;}
+	50% {left:0%;}
+	75% {left:15%;}
+	100% {left:15%;}
+}
+
+@-o-keyframes t_one_b_a {/* Opera */
+	0% {left:30%;}
+	25% {left:15%;}
+	50% {left:0%;}
+	75% {left:15%;}
+	100% {left:15%;}
+}
+
+
+</style>
+
+</head>
+<body>
+	<!-- 第一个界面-->
+	<div id = "1" class="screenOne">
+		<img style="width:100%;" src="caiqi.png" >
+		<div style="width: 800px;height: 800px;position: absolute;left: 25%;top:35%;">
+			<img id="bb_one" src="baby.png">
+			<img style="position: absolute;left: 0px;top: 0px;width:500px; height: 500px" src="bg_one_a.png" >
+		</div>
+		<img style="position: absolute;left: 15%;bottom: 0px;width:70%;" src="cake.png" >
+		<img id="bb_one_b" style="position: absolute;absolute;left: 15%;top:10%; width: 70%" src="bg_one_b.png" >
+	</div>
+	<!-- 第二个界面-->
+	<div id = "2" class="screenTwo">
+		<div id="imgContainer" style="width:100%;height:30%;margin-bottom: 15%">
+			<img src="baby.png" link="/" target="_blank">
+			<img src="baby.png" link="/" target="_blank">
+			<img src="baby.png" link="/" target="_blank">
+			<img src="baby.png" link="/" target="_blank">
+			<img src="baby.png" link="/" target="_blank">
+			<img src="baby.png" link="/" target="_blank">
+			<img src="baby.png" link="/" target="_blank">
+			<img src="baby.png" link="/" target="_blank">
+			<img src="baby.png" link="/" target="_blank">
+			<img src="baby.png" link="/" target="_blank">
+		</div>
+		<!-- poster:预览图-->
+		<video width="100%" height="20%" 
+		src="baby.mp4" 
+		poster="baby.png" 
+		autoplay="autoplay"
+		controls="controls"></video>
+
+		<div id="imgContainer_a" style="width:100%;height:20%;margin-top: 15%">
+			<img src="baby.png" link="/" target="_blank">
+			<img src="baby.png" link="/" target="_blank">
+			<img src="baby.png" link="/" target="_blank">
+			<img src="baby.png" link="/" target="_blank">
+			<img src="baby.png" link="/" target="_blank">
+			<img src="baby.png" link="/" target="_blank">
+			<img src="baby.png" link="/" target="_blank">
+			<img src="baby.png" link="/" target="_blank">
+			<img src="baby.png" link="/" target="_blank">
+			<img src="baby.png" link="/" target="_blank">
+		</div>
+	</div>
+	<!-- 第三个界面  文字-->
+	<div id = "3" class="screenThree">
+		
+	</div>
+	<!-- 第四个界面 留言-->
+	<div id = "4" class="screenFour"></div>
+	<!-- 第五个界面  待定-->
+	<div id = "5" class="screenFive"></div>
+
+	<div id="img_music" class="img_music_bg img_music_rotate"></div>
+
+</body>
+</html>
+<script type="text/javascript">
+
+	window.onload=function(){
+		start();
+
+		var rt=new imgRound("imgContainer",400,300,600,80,800,0.01);
+		setInterval(function(){rt.roundMove()},50);
+
+		var rt_a=new imgRound("imgContainer_a",400,300,600,80,800,0.01);
+		setInterval(function(){rt_a.roundMove()},50);
+	}
+
+	//选择器
+	function $a(id,tag){var re=(id&&typeof id!="string")?id:document.getElementById(id);if(!tag){return re;}else{return re.getElementsByTagName(tag);}}
+
+	function start(){
+		var interval = setInterval(uu,5000);
+		var i = 1;
+
+		function uu(){
+			if(i>=1){
+				clearInterval(interval);return;
+			}
+			var div1 = $a("" + i,"");
+			div1.style.display = 'none'
+			i++;
+		}
+	}
+
+	function imgRound(id,w,h,x,y,r,dv,rh,ah){
+		if (ah==undefined) ah=1;
+		if (rh==undefined) rh=10;
+		var dv=dv*ah; //旋转速度
+		var pi=3.1415926575;
+		var d=pi/2;
+		var pd=Math.asin(w/2/r);
+		var smove=true;
+		var imgArr=new Array();
+		var objectId=id;
+		var o=document.getElementById(objectId);
+		o.style.position="relative";
+		var arrimg=o.getElementsByTagName("img");
+		var pn=arrimg.length; //图片数量
+		var ed=pi*2/pn;
+		for (n=0;n<arrimg.length;n++){
+			var lk=arrimg[n].getAttribute("link");
+			if (lk!=null) arrimg[n].setAttribute("title",lk)
+			arrimg[n].onclick=function(){
+				if (this.getAttribute("link")!=null){
+					if (this.getAttribute("target")!="_blank") window.location=(this.getAttribute("link"))
+					else window.open(this.getAttribute("link"))
+				}
+			}
+			arrimg[n].onmouseout=function(){smove=true;}
+			arrimg[n].onmouseover=function(){smove=false;}
+			arrimg[n].style.position="absolute";
+			imgArr.push(arrimg[n]);
+		}
+		this.roundMove=function(){
+			for (n=0;n<=pn-1;n++){
+				var o=imgArr[n];
+				var ta=Math.sin(d+ed*n),strFilter;
+				if (ta<0) o.style.left=Math.cos(d+ed*n-pd)*r+x+"px";
+				else o.style.left=Math.cos(d+ed*n+pd)*r+x+"px";
+				o.style.top=ta*rh+rh+y+"px";
+				var zoom=Math.abs(Math.sin((d+ed*n)/2+pi/4))*0.5+0.5;
+				o.style.width=Math.abs(Math.cos(d+ed*n+pd)-Math.cos(d+ed*n-pd))*zoom*r+"px";
+				o.style.height=zoom*h+"px";
+				if (ta<0) {ta=(ta+1)*80+20;o.style.zIndex=0;}
+				else {ta=100;o.style.zIndex=1}
+				if (o.style.zIndex<=0) strFilter="FlipH(enabled:true)"
+				else strFilter="FlipH(enabled:false)";
+				strFilter=strFilter+" alpha(opacity="+ta+")";
+				o.style.opacity=ta/100;
+				o.style.filter=strFilter;
+			}
+			if (smove) d=d+dv;
+		}
+	}
+
+
+</script>
