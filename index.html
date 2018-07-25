@@ -12,11 +12,34 @@
 <style>
 body{background:white;}
 span{border:1px solid gray;background:#333;padding:4px;font-weight:bold;}
-.screenOne{background:#FFDBDB;width:100%;height: 100%;position: absolute;top:0px;left: 0px;z-index: 5}
-.screenTwo{background:#000;width:100%;height: 100%;position: absolute;top:0px;left: 0px;z-index: 4}
-.screenThree{background:#0f0;width:100%;height: 100%;position: absolute;top:0px;left: 0px;z-index: 3}
-.screenFour{background:#00f;width:100%;height: 100%;position: absolute;top:0px;left: 0px;z-index: 2}
-.screenFive{background:#f0f;width:100%;height: 100%;position: absolute;top:0px;left: 0px;z-index: 1}
+.screenOne{background:#FFDBDB;width:100%;height: 100%;position: absolute;top:0px;left: 0px;z-index: 5;display: none}
+.screenTwo{background:#000;width:100%;height: 100%;position: absolute;top:0px;left: 0px;z-index: 4;display: none}
+.screenThree{background:#FFDBDB;width:100%;height: 100%;position: absolute;top:0px;left: 0px;z-index: 3;display: none}
+.screenFour{background:#FFDBDB;width:100%;height: 100%;position: absolute;top:0px;left: 0px;z-index: 2}
+.screenFive{background:#FFDBDB;width:100%;height: 100%;position: absolute;top:0px;left: 0px;z-index: 1;display: none}
+
+/* 场景七 */
+.seven-box {display: block; position: absolute; width: 100%;}
+.seven-content {position: absolute;top: 0px; width: 100%; height: 50%; margin: 20px auto; }
+.seven-content div {position: absolute; width: 57px; height: 52px; padding: 15px 5px 5px 10px; background: url("note.png") no-repeat; overflow: hidden; cursor: pointer; z-index: 99;}
+.seven-content div.note-a1 {background-position: 0 0;}
+.seven-content div.note-a2 {background-position: -110px 0;}
+.seven-content div.note-a3 {background-position: -220px 0;}
+.seven-content div.note-a4 {background-position: -327px 0;}
+.seven-content div.note-a5 {background-position: 0 -150px;}
+.seven-content div.note-a6 {background-position: -110px -150px;}
+.seven-content div.note-a7 {background-position: -220px -150px;}
+.seven-content div.note-a8 {background-position: -327px -150px;}
+.seven-content div.note-a9 {background-position: 0 -296px;}
+.seven-content div.note-a10 {background-position: -110px -296px;}
+.seven-content div.note-a11 {background-position: -220px -296px;}
+.seven-content div.note-a12 {background-position: -327px -296px;}
+.seven-content div.note-1 {background-position: -1px -440px; color: #494000;}
+.seven-content div.note-2 {background-position: -110px -440px; color: #561e67;}
+.seven-content div.note-3 {background-position: -220px -440px; color: #07516f;}
+.seven-content div.note-4 {background-position: -329px -440px; color: #652f09;}
+.seven-content div.note-5 {background-position: 0 -550px; color: #6b0f13;}
+.seven-content div.note-6 {background-position: -110px -550px; color: #034914;}
 
 #img_music {
 	position: absolute;
@@ -169,6 +192,87 @@ span{border:1px solid gray;background:#333;padding:4px;font-weight:bold;}
 	100% {left:15%;}
 }
 
+.caiqi{
+	-webkit-animation: caiqi_trans 0.5s linear;/* Safari 和 Chrome */
+	-moz-animation: caiqi_trans 0.5s linear;/* Firefox */
+	-o-animation: caiqi_trans 0.5s linear;/* Opera */
+	animation: caiqi_trans 0.5s linear
+}
+
+@keyframes caiqi_trans {
+	from {top:-30%;}
+	to {top:0%;}
+}
+
+@-webkit-keyframes caiqi_trans { /* Safari 和 Chrome */
+	from {top:-30%;}
+	to {top:0%;}
+}
+
+@-moz-keyframes caiqi_trans {/* Firefox */
+	from {top:-30%;}
+	to {top:0%;}
+}
+
+@-o-keyframes caiqi_trans {/* Opera */
+	from {top:-30%;}
+	to {top:0%;}
+}
+
+.cake{
+	-webkit-animation: cake_trans 0.5s linear;/* Safari 和 Chrome */
+	-moz-animation: cake_trans 0.5s linear;/* Firefox */
+	-o-animation: cake_trans 0.5s linear;/* Opera */
+	animation: cake_trans 0.5s linear
+}
+
+@keyframes cake_trans {
+	from {top:100%;}
+	to {top:60%;}
+}
+
+@-webkit-keyframes cake_trans { /* Safari 和 Chrome */
+	from {top:100%;}
+	to {top:60%;}
+}
+
+@-moz-keyframes cake_trans {/* Firefox */
+	from {top:100%;}
+	to {top:60%;}
+}
+
+@-o-keyframes cake_trans {/* Opera */
+	from {top:100%;}
+	to {top:60%;}
+}
+
+.ballon{
+	-webkit-animation: ballon_trans 1s linear;/* Safari 和 Chrome */
+	-moz-animation: ballon_trans 1s linear;/* Firefox */
+	-o-animation: ballon_trans 1s linear;/* Opera */
+	animation: ballon_trans 1s linear
+}
+
+@keyframes ballon_trans {
+	from {top:100%;}
+	to {top:40%;}
+}
+
+@-webkit-keyframes ballon_trans { /* Safari 和 Chrome */
+	from {top:100%;}
+	to {top:40%;}
+}
+
+@-moz-keyframes ballon_trans {/* Firefox */
+	from {top:100%;}
+	to {top:40%;}
+}
+
+@-o-keyframes ballon_trans {/* Opera */
+	from {top:100%;}
+	to {top:40%;}
+}
+
 
 </style>
 
@@ -176,17 +280,19 @@ span{border:1px solid gray;background:#333;padding:4px;font-weight:bold;}
 <body>
 	<!-- 第一个界面-->
 	<div id = "1" class="screenOne">
-		<img style="width:100%;" src="caiqi.png" >
+		<img class="caiqi" style="width:100%;" src="caiqi.png" >
 		<div style="width: 800px;height: 800px;position: absolute;left: 25%;top:35%;">
 			<img id="bb_one" src="baby.png">
 			<img style="position: absolute;left: 0px;top: 0px;width:500px; height: 500px" src="bg_one_a.png" >
 		</div>
-		<img style="position: absolute;left: 15%;bottom: 0px;width:70%;" src="cake.png" >
+		<img class="cake" style="position: absolute;left: 15%;bottom: 0px;width:70%;" src="cake.png" >
 		<img id="bb_one_b" style="position: absolute;absolute;left: 15%;top:10%; width: 70%" src="bg_one_b.png" >
+		<img class="ballon" src="ballon.gif" style="position: absolute;top: 40%;width: 251.2px;height: 264px">
+		<img class="ballon" src="ballon.gif" style="position: absolute;top: 40%;right:0px;width: 251.2px;height: 264px">
 	</div>
 	<!-- 第二个界面-->
 	<div id = "2" class="screenTwo">
-		
+		<div class="demo" ></div>
 		<div id="imgContainer" style="width:100%;height:30%;margin-bottom: 15%">
 			<img src="baby.png" link="/" target="_blank">
 			<img src="baby.png" link="/" target="_blank">
@@ -218,14 +324,46 @@ span{border:1px solid gray;background:#333;padding:4px;font-weight:bold;}
 			<img src="baby.png" link="/" target="_blank">
 			<img src="baby.png" link="/" target="_blank">
 		</div>
-		<div class="demo" ></div>
+		
 	</div>
 	<!-- 第三个界面  文字-->
 	<div id = "3" class="screenThree">
 		
 	</div>
 	<!-- 第四个界面 留言-->
-	<div id = "4" class="screenFour"></div>
+	<div id = "4" class="screenFour">
+		<div class="seven-box">
+			<img src="wall.jpg" width="100%" height="100%">
+            <div class="seven-content">
+                <!-- <div class="note-a1"></div>
+                <div class="note-a2"></div>
+                <div class="note-a3"></div>
+                <div class="note-a4"></div>
+                <div class="note-a5"></div>
+                <div class="note-a6"></div>
+                <div class="note-a7"></div>
+                <div class="note-a8"></div>
+                <div class="note-a9"></div>
+                <div class="note-a10"></div>
+                <div class="note-a11"></div>
+                <div class="note-a12"></div> -->
+                <div class="note-1">一定要幸福哦~</div>
+                <div class="note-2">祝你们白头偕老！</div>
+                <div class="note-3">早生贵子~</div>
+                <div class="note-4">新婚快乐~</div>
+                <div class="note-5">生个宝宝认我做干妈！</div>
+                <div class="note-6">喜结良缘O(∩_∩)O哈哈哈~</div>
+                
+                <div class="note-1">一定要幸福哦~</div>
+                <div class="note-2">祝你们白头偕老！</div>
+                <div class="note-3">早生贵子~</div>
+                <div class="note-4">新婚快乐~</div>
+                <div class="note-5">生个宝宝认我做干妈！</div>
+                <div class="note-6">喜结良缘O(∩_∩)O哈哈哈~111111111111111111</div>
+            </div>
+        </div>
+
+	</div>
 	<!-- 第五个界面  待定-->
 	<div id = "5" class="screenFive"></div>
 
@@ -254,17 +392,19 @@ span{border:1px solid gray;background:#333;padding:4px;font-weight:bold;}
 
 		var rt_a=new imgRound("imgContainer_a",400,300,600,80,800,0.01);
 		setInterval(function(){rt_a.roundMove()},50);
+
+		scene7();
 	}
 
 	//选择器
 	function $a(id,tag){var re=(id&&typeof id!="string")?id:document.getElementById(id);if(!tag){return re;}else{return re.getElementsByTagName(tag);}}
 
 	function start(){
-		var interval = setInterval(uu,5000);
+		// var interval = setInterval(uu,5000);
 		var i = 1;
 
 		function uu(){
-			if(i>1){
+			if(i>3){
 				clearInterval(interval);return;
 			}
 			var div1 = $a("" + i,"");
@@ -322,6 +462,41 @@ span{border:1px solid gray;background:#333;padding:4px;font-weight:bold;}
 			}
 			if (smove) d=d+dv;
 		}
+	}
+
+	function scene7() {
+	    var $sevenDiv = $(".seven-content div"),
+	        $sevenBox = $(".seven-box");
+
+	    $sevenDiv.each(function() {
+	        defineSevenDiv($(this));
+	    })
+	}
+
+	/* 定义祝福语贴纸位置和旋转角度 */
+	function defineSevenDiv($own) {
+	    var _obj = defineRandom();
+	    $own.css({
+	        "transform": "rotate(" + _obj.rotate + "deg)"
+	    }); /* 设置随机旋转值 */
+	    $own.animate({
+	        left: _obj.left + "px",
+	        top: _obj.top + "px"
+	    }); /* 随机排布 */
+	}
+
+	/* 定义随机left，top和旋转值 */
+	function defineRandom() {
+	    var randomLeft = Math.floor(680 * (Math.random())) + 30,
+	        /* 图片left值 */
+	        randomTop = Math.floor(400 * Math.random()) + 30,
+	        /* 图片top值 */
+	        randomRotate = 20 - Math.floor(40 * Math.random()); /* 图片旋转角度 */
+	    return {
+	        left: randomLeft,
+	        top: randomTop,
+	        rotate: randomRotate
+	    }
 	}
 
 
